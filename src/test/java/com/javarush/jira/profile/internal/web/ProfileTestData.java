@@ -48,6 +48,18 @@ public class ProfileTestData {
                         new ContactTo("linkedin", "newLinkedin")));
     }
 
+    public static ProfileTo getUpdatedTo(Long id) {
+        return new ProfileTo(id,
+                Set.of("assigned", "three_days_before_deadline", "two_days_before_deadline", "one_day_before_deadline", "deadline", "overdue"),
+                Set.of(new ContactTo("skype", "newSkype"),
+                        new ContactTo("mobile", "+380987654321"),
+                        new ContactTo("website", "new.com"),
+                        new ContactTo("github", "newGitHub"),
+                        new ContactTo("tg", "newTg"),
+                        new ContactTo("vk", "newVk"),
+                        new ContactTo("linkedin", "newLinkedin")));
+    }
+
     public static Profile getUpdated(long id) {
         Profile profile = new Profile();
         profile.setId(id);
